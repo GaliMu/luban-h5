@@ -16,23 +16,23 @@ const sidebarMenus = [
     key: '1',
     routerName: 'work-manager-list'
   },
-  {
-    label: '数据中心',
-    i18nLabel: 'sidebar.dataCenter',
-    value: 'dataCenter',
-    antIcon: 'snippets',
-    key: '2',
-    children: [
-      {
-        label: '基础数据',
-        i18nLabel: 'sidebar.basicData',
-        value: 'basicData',
-        antIcon: 'snippets',
-        key: '2-1',
-        routerName: 'form-stat'
-      }
-    ]
-  },
+  // {
+  //   label: '数据中心',
+  //   i18nLabel: 'sidebar.dataCenter',
+  //   value: 'dataCenter',
+  //   antIcon: 'snippets',
+  //   key: '2',
+  //   children: [
+  //     {
+  //       label: '基础数据',
+  //       i18nLabel: 'sidebar.basicData',
+  //       value: 'basicData',
+  //       antIcon: 'snippets',
+  //       key: '2-1',
+  //       routerName: 'form-stat'
+  //     }
+  //   ]
+  // },
   {
     label: '模板中心',
     i18nLabel: 'sidebar.templateCenter',
@@ -50,13 +50,13 @@ const sidebarMenus = [
       }
     ]
   },
-  {
-    label: '商家中心',
-    i18nLabel: 'sidebar.accountCenter',
-    value: 'freeTemplate',
-    antIcon: 'appstore',
-    key: '4'
-  }
+  // {
+  //   label: '商家中心',
+  //   i18nLabel: 'sidebar.accountCenter',
+  //   value: 'freeTemplate',
+  //   antIcon: 'appstore',
+  //   key: '4'
+  // }
 ]
 
 export default {

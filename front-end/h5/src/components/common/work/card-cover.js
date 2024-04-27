@@ -11,7 +11,7 @@
 import placeholderImg from '@/assets/lbp-picture-placeholder.png'
 import './card-cover.scss'
 
-function getDefaultStyle (img, isPlaceholder) {
+function getDefaultStyle(img, isPlaceholder) {
   return {
     position: 'absolute',
     top: 0,
@@ -31,8 +31,8 @@ export default {
     coverImageUrl: String
   },
   methods: {
-    getCover (img, isPlaceholder = false) {
-      const width = 70
+    getCover(img, isPlaceholder = false) {
+      const width = 100
       const style = {
         ...getDefaultStyle(img, isPlaceholder),
         zIndex: 1,
@@ -43,7 +43,7 @@ export default {
         <div style={style}></div>
       ]
     },
-    getCoverBg (img, isQrcode = false) {
+    getCoverBg(img, isQrcode = false) {
       const style = {
         ...getDefaultStyle(img),
         filter: !isQrcode && 'blur(10px)'
@@ -53,7 +53,7 @@ export default {
       ]
     }
   },
-  render (h) {
+  render(h) {
     let covers = [this.getCover(placeholderImg, true/** isPlaceholder */)]
 
     if (this.qrcodeUrl) {
@@ -65,6 +65,7 @@ export default {
 
     return <div class="card-cover-wrapper" >
       {covers}
+      <p class="card-cover-wrapper-title">锐捷 H5</p>
     </div>
   }
 }

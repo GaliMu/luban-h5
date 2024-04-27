@@ -4,4 +4,16 @@
   border: 1px dashed #eee;
   color: #aaa;
   padding: 4px;
+
+  .card-cover-wrapper-title {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 36%;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    color: #fff;
+    z-index: 1;
+  }
 }

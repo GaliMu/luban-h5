@@ -25,23 +25,23 @@ import router from 'core/router/index'
 import i18n from '@/locales'
 import '@/plugins/index'
 
-function AdjustHoc (WrappedComponent) {
+function AdjustHoc(WrappedComponent) {
   return {
     props: WrappedComponent.props,
     data: () => ({
       show: true
     }),
     computed: {
-      displayStyle () {
+      displayStyle() {
         return {
           display: this.show ? 'block' : 'none'
         }
       },
-      iconType () {
+      iconType() {
         return `vertical-${this.show ? 'right' : 'left'}`
       }
     },
-    render (h) {
+    render(h) {
       return (
         <div class="collapse-indicator-wrapper">
           <WrappedComponent
@@ -93,9 +93,9 @@ const CoreEditor = {
   methods: {
     ...mapActions('editor', ['fetchWork']),
     ...mapMutations('dialog', ['updateDialog']),
-    handlePreview () { this.previewDialogVisible = true }
+    handlePreview() { this.previewDialogVisible = true }
   },
-  render (h) {
+  render(h) {
     return (
       <a-layout>
         <Header>
@@ -109,11 +109,11 @@ const CoreEditor = {
           <FixedTools />
           <EditorRightPanel width={this.propsPanelWidth} />
         </a-layout>
-          <PreviewDialog
-            work={this.work}
-            visible={this.previewDialogVisible}
-            handleClose={() => { this.previewDialogVisible = false }}
-          />
+        <PreviewDialog
+          work={this.work}
+          visible={this.previewDialogVisible}
+          handleClose={() => { this.previewDialogVisible = false }}
+        />
         <ScriptViewDialog
           zIndex={1001}
           visible={this.viewScript_dialog}
@@ -124,11 +124,11 @@ const CoreEditor = {
           visible={this.allScriptList_dialog}
           handleClose={() => { this.updateDialog({ type: 'allScriptList_dialog', value: false }) }}
         />
-        <Feedback />
+        {/* <Feedback /> */}
       </a-layout>
     )
   },
-  created () {
+  created() {
     if (this.workId) {
       this.fetchWork(this.workId)
     } else {

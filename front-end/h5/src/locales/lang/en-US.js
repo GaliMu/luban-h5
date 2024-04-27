@@ -1,6 +1,6 @@
 export default {
   app: {
-    title: 'Luban H5'
+    title: '锐捷 H5'
   },
   header: {
     chineseDocument: '中文文档',

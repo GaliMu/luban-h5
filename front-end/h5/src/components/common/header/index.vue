@@ -2,7 +2,7 @@
   <a-layout-header class="layout-header">
     <LogoOfHeader />
     <div style="float:right;">
-      <Links />
+      <!-- <Links /> -->
     <slot name="action-menu"></slot>
     <LangSelect />
     </div>
